@@ -59,15 +59,15 @@ function send_email($email, $sub, $msg, $header, $UserName)
         //Server settings
         $mail->SMTPDebug = 2;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'mail.flexone.cloud';                     //Set the SMTP server to send through
+        $mail->Host       = '';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'contact@myprojectstart.com';                     //SMTP username
-        $mail->Password   = 'azerty';                               //SMTP password
-        $mail->SMTPSecure = STARTTLS;            //Enable implicit TLS encryption
+        $mail->Username   = '';                     //SMTP username
+        $mail->Password   = '';                               //SMTP password
+        $mail->SMTPSecure = ;            //Enable implicit TLS encryption
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
         //Recipients
-        $mail->setFrom('contact@myprojectstart.com', 'Admin');
+        $mail->setFrom('', '');
         global $cnn;
         $mail->addAddress($email, $UserName);     //Add a recipient
         //$mail->addReplyTo('info@example.com', 'Information');
